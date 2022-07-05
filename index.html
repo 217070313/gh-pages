@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koketso's widgets</title>
+    <script src="greet.js"></script>
+    <script src="total-phone-bill.js"></script>
+    <script src="totalPhonebill-widget.js"></script>
+    <script src="greet-widget.js"></script>
+    <script src="which-shift.js"></script>
+    <script src="shift-widget.js"></script>
+    <script src="itemsover.js"></script>
+    <script src="enough-airtime-widget.js"></script>
+    <script src="airtime-widget.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Diplomata SC">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Code Pro">
+
+<body>
+    <div class="heading"><h1>Widget with alpinejs</h1></div>
+    <div class="container">
+        <div class="widgets">
+<div class="widget" x-data="greetWidget"> 
+    <h2>Greet Widget</h2>
+   <div class="input">
+    <label for="enterName">Please enter name</label>
+    <input type="text" id="enterName" x-model="enterName"></input>
+    <div class="">
+    <button x-on:click="greeting ; showMessage=!showMessage" x-show="enterName.length > 0" class="btn-greet">Enter!</button>
+    </div>
+   </div>
+   <div class="message" x-text="message" x-show="showMessage">
+    Name and message appear here!
+    </div>
+</div>
+<div class="widget" x-data="shiftWidget">
+    <h2>Which shift Widget</h2>
+    <div class="input">
+    <label for="whichShift">Selected shift Amount:</label>
+    <span class="messages" x-text="messages">Name and message appear here!</span>
+    </div>
+    <div class="">
+        <input type="radio" id="morning" @change="whichshift" name="TimeofDay" value="morning" x-model="TimeofDay">
+        <label for="morning">Morning</label><br>
+        <input type="radio" id="afternoon" @change="whichshift" name="TimeofDay" value="afternoon" x-model="TimeofDay">
+        <label for="morning">Afternoon</label><br>
+        <input type="radio" id="nightshift" @change="whichshift" name="TimeofDay" value="nightshift" x-model="TimeofDay">
+        <label for="morning">Nightshift</label><br>
+    </div>
+</div>
+    <div class="widget" x-data="{
+    itemover20 : '',
+    results : '',
+    itemNum(){
+    console.log('Enter')
+    this.results = findItemsOver20(this.itemover20)
+      }
+    }">
+    <h2>Items Over Widget</h2>
+      <div class="input">
+        <label for="itemover20">Enter quantity number:</label>
+        <input type="text" id="itemover20" x-model="itemover20" placeholder="Qty"></input>
+        <button x-on:click="itemNum" class="btn-items"></button>
+      </div>
+      <div class="message" x-text="results">
+       Items: 
+      </div>
+    </div>
+</div>
+    <div class="widgets">
+        <div class="widget" x-data="enoughAirtimeWidget">
+
+            <h2>Enough Airtime Widget</h2>
+
+            <div class="input">
+                <label for="usage">Please enter your airtime usage: </label>
+                <input type="text" x-model="airtimeUsage" id="usage" placeholder="call,sms,data">
+            </div>
+            <div class="input">
+                <label for="amount">Amount available: </label>
+                <span class="currency-code">R</span>
+                <input type="text" x-model="availableAmount" id="amount" placeholder="R">
+            </div>
+
+            <div x-show="airtimeMessage.length > 0" class="message" x-text="airtimeMessage"></div>
+
+            <div class="">
+                <button x-on:click="calculate ; showMessage=!showMessage" class="btn-airtime" x-show="airtimeUsage.length > 0">
+                BALANCE</button>
+            </div>
+
+        </div>
+
+        <div class="widget" x-data="totalPhoneBillWidget">
+
+            <h2>Total Phone Bill Widget</h2>
+
+            <div class="input">
+                <label for="usedAirtime">Please enter your airtime usage: </label>
+                <input type="text" x-model="tarrifCharged" id="usedAirtime" placeholder="call,sms">
+            </div>
+
+            <div x-show="usageMessage.length > 0" class="message" x-text="usageMessage"></div>
+
+            <div class="">
+                <button x-on:click="calculateTarrif ; showMessage=!showMessage" class="btn-bill" x-show="usedAirtime.length > 0">
+                BILL</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

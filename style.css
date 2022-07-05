@@ -1,0 +1,205 @@
+.message{
+    background-color: yellowgreen;
+    padding: 1em;
+    margin: 5em;
+}
+.greetme{
+    padding: 1em;
+    margin: 5em;
+    border: solid, 1em;
+    background-color: aqua;
+}
+.shift{
+    padding: 1em;
+    margin: 5em;
+    border: solid, 1em;
+    background-color:orangered;
+}
+.rbtn{
+    padding: 1em;
+    margin: 5em;
+    border: solid, 1em;
+    background-color: aqua;
+}
+.results{
+    background-color: yellowgreen;
+    padding: 1em;
+}
+.heading{
+    display: flexbox;
+    text-align: center;
+}
+body{
+     background-color: palevioletred;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.btn{
+    margin-top: 1em;
+
+}
+@media only screen and (min-width:768px) {
+    .body {
+        align-items: center;
+    }
+
+    .widgets {
+        display: flex;
+    }
+}
+.widget {
+    flex: 1;
+    border: 1px solid #ff2877;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: #ff2877;
+    font-family: pacifico;
+}
+
+h1 {
+    font-family: Diplomata SC;
+    font-size: xxx-large;
+    text-align: center;
+}
+
+h2 {
+    font-family: Pacifico;
+    font-size: xx-large;
+}
+.btn-airtime {
+    padding: 1em 0em 1em 0em;
+    width: 8em;
+    background-color: #2196f3;
+    color: #fff;
+    font-family: Exo;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    border-radius: 1.5em;
+}
+
+.btn-airtime img {
+    margin-right: 0.5em;
+    vertical-align: bottom;
+    margin-bottom: -0.2em;
+}
+
+.btn-bill {
+    padding: 1em 0em 1em 0em;
+    width: 6em;
+    background-color: #2196f3;
+    color: #fff;
+    font-family: Exo;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    border-radius: 1.5em;
+}
+
+.btn-bill img {
+    margin-right: 0.5em;
+    vertical-align: bottom;
+    margin-bottom: -0.35em;
+}
+.message {
+    padding: 1em;
+    background-color: transparent;
+    margin-bottom: 1em;
+    font-family: Source Code Pro;
+    font-weight: bold;
+}
+
+.input>label {
+    display: inline-block;
+    width: 15em;
+    padding: 0.5em;
+}
+
+.input>input[type="text"] {
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: #fff;
+    font-family: Source Code Pro;
+    font-size: medium;
+    border: 0em;
+    border-radius: 0.5em;
+}
+
+.inputName>label {
+    display: inline-block;
+    width: 11.5em;
+    padding: 0.5em;
+}
+
+.inputName>input[type="text"] {
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: #fff;
+    font-family: Source Code Pro;
+    font-size: medium;
+    border: 0em;
+    border-radius: 0.5em;
+}
+.btn-greet {
+    padding: 1em 0em 1em 0em;
+    width: 8em;
+    background-color: #2196f3;
+    color: #fff;
+    font-family: Exo;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    border-radius: 1.5em;
+}
+
+.btn-greet img {
+    margin-right: 0.5em;
+    vertical-align: bottom;
+    margin-bottom: -0.1em;
+}
+.btn-airtime {
+    padding: 1em 0em 1em 0em;
+    width: 8em;
+    background-color: #2196f3;
+    color: #fff;
+    font-family: Exo;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    border-radius: 1.5em;
+}
+btn-items {
+    padding: 1em 0em 1em 0em;
+    width: 8em;
+    background-color: #2196f3;
+    color: #fff;
+    font-family: Exo;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    border-radius: 1.5em;
+}
+
+.btn-airtime img {
+    margin-right: 0.5em;
+    vertical-align: bottom;
+    margin-bottom: -0.2em;
+}
+
+.btn-bill {
+    padding: 1em 0em 1em 0em;
+    width: 6em;
+    background-color: #2196f3;
+    color: #fff;
+    font-family: Exo;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    border-radius: 1.5em;
+}
+
+.btn-bill img {
+    margin-right: 0.5em;
+    vertical-align: bottom;
+    margin-bottom: -0.35em;
+}
